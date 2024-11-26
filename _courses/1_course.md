@@ -2,7 +2,7 @@
 layout: page
 title: "COSI115B <br> Fundamentals of Natural Language Processing"
 description:
-img: assets/img/compLingHead_catalyst.png
+img: assets/img/135-background.jpg
 importance: 1
 # category: work
 related_publications: true

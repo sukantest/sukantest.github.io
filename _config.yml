@@ -201,7 +201,7 @@ collections:
     permalink: /:collection/:title/
   courses:
     output: true
-    permalink: /:collection/:title/  
+    permalink: /:collection/:title/
 
 announcements:
   enabled: true
