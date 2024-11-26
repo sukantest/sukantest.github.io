@@ -2,10 +2,41 @@
 layout: default
 ---
 <div class="post">
+  <!-- Title with Image Next to It -->
+  <div class="banner-title">
+    <div class="title-image-container" style="display: flex; align-items: center;">
+      <!-- Image on the left -->
+      <img
+        src="{{ page.title_image | prepend: 'assets/img/brandeisunivseal.png' }}"
+        alt="Title Image"
+        style="width: 90px; height: 90px; margin-right: 10px; object-fit: contain; border-radius: 100%;"
+      >
+      <!-- Title on the right -->
+      <h2 style="font-size: 40px; font-weight: bold; margin-bottom: 20px;">
+        <a href="{{ page.title_link | default: '/' }}" style="color: #333; text-decoration: none;"> Brandeis Department of Computer Science </a>
+      </h2>
+    </div>
+  </div>
+
+<!-- Banner Image -->
+<div class="banner" style="width: 100%; height: 100px; overflow: hidden; border-radius: 10px;">
+  <img
+    src="{{ page.banner_image }}"
+    srcset="
+      {{ page.banner_image }} 1920w,
+      {{ page.banner_image | replace: '.jpg', '-small.jpg' }} 768w
+    "
+    sizes="(min-width: 1024px) 100vw, 30vw"
+    alt="Banner Image"
+    class="img-fluid"
+    style="width: 100%; height: auto; object-fit: cover;"
+  >
+</div>
+
   <header class="post-header">
     <h1 class="post-title">
       {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
+        <span>{{ site.first_name }}</span> {{ site.middle_name }}
         {{ site.last_name }}
       {% else %}
         {{ site.title }}
@@ -13,7 +44,6 @@ layout: default
     </h1>
     <p class="desc">{{ page.subtitle }}</p>
   </header>
-
   <article>
     {% if page.profile %}
       <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">

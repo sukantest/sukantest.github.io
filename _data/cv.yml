@@ -13,7 +13,7 @@
   contents:
     - title: PhD
       institution: University of Massachusetts, Amherst
-      year: 
+      year:
       # description:
       #   - Description 1.
       #   - Description 2.
@@ -47,7 +47,6 @@
     #   description:
     #     - Description 1.
     #     - Description 2.
-
     - title: Affiliated Faculty
       institution: Interdepartmental Program in Linguistics and Computational Linguistics, Brandeis University
       # year:
